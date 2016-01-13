@@ -8,4 +8,5 @@ clean:
 
 all: clean
 	gcc $(CFLAGS) src/hello.c -o dst/hello
-	gcc $(CFLAGS) src/points.c -o dst/points
+	gcc $(CFLAGS) src/structs.c -o dst/structs
+	gcc $(CFLAGS) src/fizz-buzz.c -o dst/fizz-buzz
