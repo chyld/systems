@@ -10,3 +10,4 @@ all: clean
 	gcc $(CFLAGS) src/hello.c -o dst/hello
 	gcc $(CFLAGS) src/structs.c -o dst/structs
 	gcc $(CFLAGS) src/fizz-buzz.c -o dst/fizz-buzz
+	gcc $(CFLAGS) src/pointers.c -o dst/pointers
