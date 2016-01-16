@@ -11,3 +11,4 @@ all: clean
 	gcc $(CFLAGS) src/structs.c -o dst/structs
 	gcc $(CFLAGS) src/fizz-buzz.c -o dst/fizz-buzz
 	gcc $(CFLAGS) src/pointers.c -o dst/pointers
+	gcc $(CFLAGS) src/file-io.c -o dst/file-io
