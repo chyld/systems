@@ -12,3 +12,5 @@ all: clean
 	gcc $(CFLAGS) src/fizz-buzz.c -o dst/fizz-buzz
 	gcc $(CFLAGS) src/pointers.c -o dst/pointers
 	gcc $(CFLAGS) src/file-io.c -o dst/file-io
+	gcc $(CFLAGS) src/stdin-stdout.c -o dst/stdin-stdout
+	gcc $(CFLAGS) src/forking.c -o dst/forking
