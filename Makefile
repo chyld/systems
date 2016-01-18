@@ -4,7 +4,8 @@
 CFLAGS=-g -O0 -std=c11 -Wall -Wextra -Wpedantic -Werror -Wshadow
 
 clean:
-	rm -f dst/*
+	rm -rf dst/*
+	mkdir -p dst/puzzle
 
 all: clean
 	gcc $(CFLAGS) src/hello.c -o dst/hello
@@ -14,3 +15,4 @@ all: clean
 	gcc $(CFLAGS) src/file-io.c -o dst/file-io
 	gcc $(CFLAGS) src/stdin-stdout.c -o dst/stdin-stdout
 	gcc $(CFLAGS) src/forking.c -o dst/forking
+	gcc $(CFLAGS) src/puzzle/reverse-integer.c -o dst/puzzle/reverse-integer
