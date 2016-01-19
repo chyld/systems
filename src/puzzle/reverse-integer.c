@@ -5,27 +5,28 @@
 int reverse(int x);
 
 int main(){
-  printf("123: %d\n", reverse(123));
+  printf("x: %d, r: %d\n", 1534236469, reverse(1534236469));
+  printf("x: %d, r: %d\n", 1, reverse(1));
+  printf("x: %d, r: %d\n", 0, reverse(0));
+  printf("x: %d, r: %d\n", -1, reverse(-1));
+  printf("x: %d, r: %d\n", -1900800700, reverse(-1900800700));
 }
 
 int reverse(int x){
-  bool is_neg = false;
-  int numbers[10];
+  int sign = 1, r = 0;
 
   if(x < 0){
-    is_neg = true;
-    x *= -1;
+    sign = -1;
+    x *= sign;
   }
 
-  for(int divisor = 1000000000, index = 0; divisor > 0; divisor /= 10, index++){
-    numbers[index] = x / divisor;
-    x %= divisor;
+  while(x){
+    if(r != (r*10)/10)
+      return 0;
+    r = (r * 10) + (x % 10);
+    x /= 10;
   }
 
-  for(int i = 9; i > -1; i--){
-    printf("index: %d, value: %d\n", i, numbers[i]);
-  }
-
-
-  return x - 100 - is_neg;
+  r *= sign;
+  return r;
 }
